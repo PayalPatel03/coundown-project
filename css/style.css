@@ -1,0 +1,22 @@
+.containerr {
+    text-align: center;
+    /* background: linear-gradient(135deg, #617252, #ff4b2b); */
+    background-color: chocolate;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 75, 43, 0.6);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    /* animation: glow 1.5s infinite alternate; */
+}
+/* @keyframes glow {
+    from {
+        box-shadow: 0 0 20px rgba(255, 75, 43, 0.6);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(255, 75, 43, 1);
+    }
+} */
+
+/*slider*/
