@@ -1,22 +1,84 @@
-.containerr {
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
     text-align: center;
-    /* background: linear-gradient(135deg, #617252, #ff4b2b); */
-    background-color: chocolate;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.containerr {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     padding: 20px 40px;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 75, 43, 0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
     color: white;
     font-size: 20px;
     font-weight: bold;
-    /* animation: glow 1.5s infinite alternate; */
+    animation: glow 1.5s infinite alternate;
+    transition: transform 0.3s;   
 }
-/* @keyframes glow {
+
+.containerr:hover {
+    transform: scale(1.05);
+}
+
+@keyframes glow {
     from {
-        box-shadow: 0 0 20px rgba(255, 75, 43, 0.6);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
     }
     to {
-        box-shadow: 0 0 30px rgba(255, 75, 43, 1);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
     }
-} */
+}
 
-/*slider*/
+.carousel-item img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.1);
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: transform 0.3s;
+    backdrop-filter: blur(10px);
+    margin: 0 auto; 
+    width: 50%; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body button {
+    background: #ff4b2b;
+    border: none;
+    transition: background 0.3s;
+}
+
+.card-body button:hover {
+    background: #e63900;
+}
