@@ -1,18 +1,20 @@
 let saleTime = 86400;
+let slides = document.querySelectorAll(".carousel-item");
+let slideIndex = 0;
+let quote = document.querySelector('.blockquote p');
+let footer = document.querySelector('.blockquote-footer');
+
 let Timer = () => {
     let hours = Math.floor(saleTime / 3600);
     let minutes = Math.floor((saleTime % 3600) / 60);
     let seconds = saleTime % 60;
     document.getElementById('timer').innerText = `Sale Starts In: ${hours}h ${minutes}m ${seconds}s`;
-    if (saleTime > 0){
+    if (saleTime > 0) {
         saleTime--;
     }
-       
+
 }
 setInterval(Timer, 1000);
-
-let slides = document.querySelectorAll(".carousel-item");
-let slideIndex = 0;
 
 let showSlide = () => {
     for (let i = 0; i < slides.length; i++) {
@@ -32,12 +34,6 @@ let nextSlide = () => {
 setInterval
     (nextSlide, 2000);
 
-
-
-let quote=document.querySelector('.blockquote p');
-let footer=document.querySelector('.blockquote-footer');
-
-
 const brands = [
     { name: "Nike", tagline: "Just Do It." },
     { name: "Adidas", tagline: "Impossible Is Nothing." },
@@ -50,14 +46,14 @@ const brands = [
     { name: "Louis Vuitton", tagline: "L'Art de Vivre." },
     { name: "Calvin Klein", tagline: "Between love and madness lies obsession." }
 ];
-  let changeQuote=()=>{
-    let index=Math.floor(Math.random()*brands.length);
+let changeQuote = () => {
+    let index = Math.floor(Math.random() * brands.length);
 
-    quote.textContent=brands[index].name;
-    footer.textContent=brands[index].tagline;
-  }
-  changeQuote();
+    quote.textContent = brands[index].name;
+    footer.textContent = brands[index].tagline;
+}
+changeQuote();
 
-  setInterval(() => {
+setInterval(() => {
     changeQuote();
-  }, 2000);
+}, 2000);
